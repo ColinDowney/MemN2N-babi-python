@@ -39,7 +39,7 @@ class MemN2N(object):
                 self.model is None or self.loss is None or self.general_config is None:
             print("Loading model from file %s ..." % self.model_file)
             with gzip.open(self.model_file, "rb") as f:
-                self.reversed_dict, self.memory, self.model, self.loss, self.general_config = pickle.load(f)
+                self.reversed_dict, self.memory, self.model, self.loss, self.general_config = pickle.load(f, encoding='bytes')
 
     def train(self):
         """

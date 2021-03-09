@@ -147,7 +147,7 @@ def train_linear_start(train_story, train_questions, train_qstory, memory, model
     # Add new settings
     general_config.nepochs          = general_config.ls_nepochs
     general_config.lrate_decay_step = general_config.ls_lrate_decay_step
-    train_config["init_lrate"]      = general_config.ls_init_lrate
+    train_config["python -m demo.qainit_lrate"]      = general_config.ls_init_lrate
 
     # Train with new settings
     train(train_story, train_questions, train_qstory, memory, model, loss, general_config)
